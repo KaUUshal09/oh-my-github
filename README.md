@@ -21,15 +21,17 @@ Laravel 8.0 or higher
 
 Filament
 
+XAMPP (for local database)
+
 
 ## Installation
 Step 1: Clone the repository
 
 ```
-git clone https://github.com/your-username/github-helper.git
+git clone https://github.com/your-username/oh-my-github.git
 ```
 ```
-cd github-helper
+cd oh-my-github
  ```
 
 Step 2: Install dependencies
@@ -51,15 +53,39 @@ Generate an application key:
 php artisan key:generate
 ```
 
-Step 4: Configure .env file for the database
+Step 4: Set up the database
+
+
+1. Start XAMPP:
+
+   - Open XAMPP Control Panel.
+   
+   - Start the Apache and MySQL modules.
+
+
+2. Create a database:
+
+
+   - Open your web browser and go to http://localhost/phpmyadmin.
+
+   - Click on the "New" button in the left sidebar.
+
+   - Enter a database name and click "Create".
+
+
+3. Configure database connection:
+
+
+   - In your .env file, update the following database configuration:
+
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=laravel
+DB_DATABASE=your_database_name
 DB_USERNAME=root
-DB_PASSWORD=root
-``` 
+DB_PASSWORD=
+```
 Step 5: Set up the database
 
 Run the database migrations:
